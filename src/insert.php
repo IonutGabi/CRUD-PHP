@@ -68,11 +68,11 @@ $autor = $_POST['autor'];
 $fechaPublicacion = $_POST['fechapublicacion'];
 $genero = $_POST['genero'];
 
-$consultaInsert = "INSERT INTO libros(titulo,autor,fechapublicacion,genero) VALUES ('$titulo','$autor','$fechaPublicacion','$genero')";
+$consulta = "INSERT INTO libros(titulo,autor,fechapublicacion,genero) VALUES ('$titulo','$autor','$fechaPublicacion','$genero')";
 
 if (isset($_POST['submit'])) {
 
-    $mysql->query($consultaInsert) or
+    $mysql->query($consulta) or
         die($mysql->error($mysql));
 
         $mysql->close();
