@@ -1,6 +1,6 @@
 <?php
-include("./conexion.php");
-include("./funciones.php");
+include("conexion.php");
+include("funciones.php");
 csrf();
 
 if (isset($_POST['submit']) && !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
@@ -45,9 +45,10 @@ include("./includes/header.php");
                 </thead>
                 <tbody>
                     <?php
+                    $consulta = "SELECT idlibro, titulo, autor, DATE_FORMAT(fechapublicacion, '%d/%m/%Y') AS fechapublicacion, genero FROM libros";
                     
-                    $registros = $mysql->query("SELECT idlibro, titulo, autor, DATE_FORMAT(fechapublicacion,'%d/%m/%Y') AS fechapublicacion, genero FROM libros") or
-                    die($mysql->error($mysql));
+                    $registros = $mysql->query($consulta) or
+                    die("Problemas con la consulta SELECT: " . $mysql->error());
                     
                     while ($reg = $registros->fetch_array()) { ?>
                     <tr>

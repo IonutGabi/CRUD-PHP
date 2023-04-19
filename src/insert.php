@@ -63,9 +63,16 @@ if (isset($_SESSION['mensaje']) && (isset($_POST['submit']))) {
 
 <?php
 
+$titulo = $_POST['titulo'];
+$autor = $_POST['autor'];
+$fechaPublicacion = $_POST['fechapublicacion'];
+$genero = $_POST['genero'];
+
+$consultaInsert = "INSERT INTO libros(titulo,autor,fechapublicacion,genero) VALUES ('$titulo','$autor','$fechaPublicacion','$genero')";
+
 if (isset($_POST['submit'])) {
 
-    $mysql->query("INSERT INTO libros(titulo,autor,fechapublicacion,genero) VALUES ('$_POST[titulo]','$_POST[autor]','$_POST[fechapublicacion]','$_POST[genero]')") or
+    $mysql->query($consultaInsert) or
         die($mysql->error($mysql));
 
         $mysql->close();

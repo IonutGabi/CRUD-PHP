@@ -3,7 +3,10 @@
 include("conexion.php");
 
 if (isset($_GET['idlibro'])) {
-    $registros = $mysql->query("SELECT idlibro, titulo, autor, fechapublicacion,genero  FROM libros WHERE idlibro = '$_GET[idlibro]'") or
+
+    $consulta = "SELECT * FROM libros WHERE idlibro = '$_GET[idlibro]'";
+
+    $registros = $mysql->query($consulta) or
     die($mysql->error($mysql));
     if ($reg = $registros->fetch_array()) {
     
@@ -11,7 +14,7 @@ if (isset($_GET['idlibro'])) {
 ?>
 
 <?php
-include("./funciones.php"); 
+include("funciones.php"); 
 csrf();
 if (isset($_GET['libro']) && !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
     die();
@@ -73,12 +76,16 @@ if (isset($_SESSION['mensaje']) && isset($_POST['submit']))  {
 <?php }
 
 if (isset($_POST['submit'])) {
-    $mysql->query("UPDATE libros SET
-                            titulo = '$_POST[titulo]',
-                            autor = '$_POST[autor]',
-                            fechapublicacion = '$_POST[fechapublicacion]',
-                            genero = '$_POST[genero]'
-                    WHERE idlibro = '$_REQUEST[idlibro]'") or
+
+    $titulo = $_POST['titulo'];
+    $autor = $_POST['autor'];
+    $fechaPublicacion = $_POST['fechapublicacion'];
+    $genero = $_POST['genero'];
+    $idlibro = $_REQUEST['idlibro'];
+
+    $consulta = "UPDATE libros SET titulo = '$titulo',autor = '$autor',fechapublicacion = '$fechaPublicacion',genero = '$genero' WHERE idlibro = '$idlibro'";
+
+    $mysql->query($consulta) or
         die($mysql->error($mysql));
 }
 

@@ -1,10 +1,17 @@
 <?php
-include("./conexion.php");
-include("./funciones.php");
+include("conexion.php");
+include("funciones.php");
 include("./includes/header.php");
-if (isset($_POST['idlibro']))  
-$registros = $mysql->query("SELECT idlibro, titulo, autor, DATE_FORMAT(fechapublicacion, '%d/%m/%Y') AS fechapublicacion, genero FROM libros WHERE idlibro = $_POST[idlibro]") or
+
+$idlibro = $_POST['idlibro'];
+
+if (isset($idlibro));
+
+$consulta = "SELECT idlibro, titulo, autor, DATE_FORMAT(fechapublicacion, '%d/%m/%Y') AS fechapublicacion, genero FROM libros WHERE idlibro = $idlibro";
+
+$registros = $mysql->query($consulta) or
                 die($mysql->error());
+                
 while ($reg = $registros->fetch_array()) {
 ?>
     <div class="container">
