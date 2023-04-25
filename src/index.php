@@ -14,7 +14,7 @@ include("./includes/header.php");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <a href="insert.php" class="btn btn-primary mt-4">Introducir libro</a>
+            <a href="./funcionesPrincipales/insert.php" class="btn btn-primary mt-4">Introducir libro</a>
             <hr/>
             <form action="consulta.php" method="post" class="form-inline">
                 <div class="form-group mr-3">
@@ -58,11 +58,11 @@ include("./includes/header.php");
                         <td><?php echo $reg['fechapublicacion']; ?></td>
                         <td><?php echo $reg['genero']; ?></td>
                         <td>
-                            <a href="edit.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-secondary" >
+                            <a href="./funcionesPrincipales/edit.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-secondary" >
                                 <i class="fa-solid fa-square-pen"></i>
                             </a>
                             
-                            <a href="delete.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-danger">
+                            <a href="./funcionesPrincipales/delete.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>
@@ -77,4 +77,4 @@ include("./includes/header.php");
     </div>
 </div>
 
-<?php include("includes/footer.php");?>
+<?php include("./includes/footer.php");?>

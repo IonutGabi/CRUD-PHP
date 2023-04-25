@@ -1,11 +1,11 @@
 <?php
-include("./conexion.php"); 
-include("./funciones.php");
+include("../conexion.php"); 
+include("../funciones.php");
 csrf();
 if (isset($_POST['submit']) && !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
     die();
 }
-include("./includes/header.php");
+include("../includes/header.php");
 ?>
 <?php
 if (isset($_SESSION['mensaje']) && (isset($_POST['submit']))) {
@@ -52,14 +52,14 @@ if (isset($_SESSION['mensaje']) && (isset($_POST['submit']))) {
                 <div class="form-group">
                     <input type="hidden" name="csrf" value="<?php echo escapar($_SESSION['csrf']);?>">
                     <input type="submit" name="submit" class="btn btn-primary" value="Enviar">
-                    <a class="btn btn-primary" href="index.php">Volver a la página principal</a>
+                    <a class="btn btn-primary" href="../index.php">Volver a la página principal</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<?php include("./includes/footer.php"); ?>
+<?php include("../includes/footer.php"); ?>
 
 <?php
 

@@ -1,6 +1,6 @@
 <?php
 
-include("conexion.php");
+include("../conexion.php");
 
 if (isset($_GET['idlibro'])) {
 
@@ -14,12 +14,12 @@ if (isset($_GET['idlibro'])) {
 ?>
 
 <?php
-include("funciones.php"); 
+include("../funciones.php"); 
 csrf();
 if (isset($_GET['libro']) && !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
     die();
 }
-include("./includes/header.php"); 
+include("../includes/header.php"); 
 ?>
 
 <?php
@@ -67,7 +67,7 @@ if (isset($_SESSION['mensaje']) && isset($_POST['submit']))  {
                 <div class="form-group">
                     <input type="hidden" name="csrf" value="<?php echo escapar($_SESSION['csrf']);?>">
                     <input type="submit" name="submit" class="btn btn-primary" value="Actualizar">
-                    <a href="index.php" class="btn btn-primary">Volver a la página principal</a>
+                    <a href="../index.php" class="btn btn-primary">Volver a la página principal</a>
                 </div>
             </form>
         </div>
@@ -92,4 +92,4 @@ if (isset($_POST['submit'])) {
 escapar($_SESSION['mensaje'] = 'Libro actulizado satisfactoriamente');
 $_SESSION['mensaje_type'] = 'success'
 ?>
-<?php include("./includes/footer.php");?>
+<?php include("../includes/footer.php");?>

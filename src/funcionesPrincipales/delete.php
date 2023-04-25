@@ -1,7 +1,7 @@
 <?php
 
-include("conexion.php");
-include("funciones.php");
+include("../conexion.php");
+include("../funciones.php");
 
 if (isset($_GET['idlibro'])) {
     $idlibro = $_GET['idlibro'];
@@ -10,7 +10,7 @@ if (isset($_GET['idlibro'])) {
 
     escapar($_SESSION['mensaje'] = 'Libro borrado satisfactoriamente');
     $_SESSION['mensaje_type'] = 'danger';
-    header("Location: index.php");
+    header("Location: ../index.php");
     
 }
 ?>

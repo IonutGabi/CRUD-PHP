@@ -32,10 +32,10 @@ while ($reg = $registros->fetch_array()) {
                         <td><?php echo $reg['fechapublicacion'];?></td>
                         <td><?php echo $reg['genero'];?></td>
                         <td>
-                        <a href="edit.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-secondary" >
+                        <a href="./funcionesPrincipales/edit.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-secondary" >
                                 <i class="fa-solid fa-square-pen"></i>
                             </a>
-                            <a href="delete.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-danger">
+                            <a href="./funcionesPrincipales/delete.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>
