@@ -14,9 +14,9 @@ include("./includes/header.php");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <a href="./funcionesPrincipales/insert.php" class="btn btn-primary mt-4">Introducir libro</a>
+            <a href="./Funcionalidad/insert.php" class="btn btn-primary mt-4">Introducir libro</a>
             <hr/>
-            <form action="consulta.php" method="post" class="form-inline">
+            <form action="./Funcionalidad/consulta.php" method="post" class="form-inline">
                 <div class="form-group mr-3">
                     <input type="text" name="idlibro" id="idlibro" placeholder="Buscar por el ID del libro" class="form-control">
                 </div>
@@ -58,11 +58,11 @@ include("./includes/header.php");
                         <td><?php echo $reg['fechapublicacion']; ?></td>
                         <td><?php echo $reg['genero']; ?></td>
                         <td>
-                            <a href="./funcionesPrincipales/edit.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-secondary" >
+                            <a href="./Funcionalidad/edit.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-secondary" >
                                 <i class="fa-solid fa-square-pen"></i>
                             </a>
                             
-                            <a href="./funcionesPrincipales/delete.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-danger">
+                            <a href="./Funcionalidad/delete.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>

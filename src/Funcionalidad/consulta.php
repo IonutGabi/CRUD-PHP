@@ -1,7 +1,7 @@
 <?php
-include("conexion.php");
-include("funciones.php");
-include("./includes/header.php");
+include("../conexion.php");
+include("../funciones.php");
+include("../includes/header.php");
 
 $idlibro = $_POST['idlibro'];
 
@@ -32,10 +32,10 @@ while ($reg = $registros->fetch_array()) {
                         <td><?php echo $reg['fechapublicacion'];?></td>
                         <td><?php echo $reg['genero'];?></td>
                         <td>
-                        <a href="./funcionesPrincipales/edit.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-secondary" >
+                        <a href="edit.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-secondary" >
                                 <i class="fa-solid fa-square-pen"></i>
                             </a>
-                            <a href="./funcionesPrincipales/delete.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-danger">
+                            <a href="delete.php?idlibro=<?php echo $reg['idlibro'];?>" class="btn btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>
@@ -49,5 +49,5 @@ while ($reg = $registros->fetch_array()) {
         </div>
     </div>
 <?php }
-include("./includes/footer.php");
+include("../includes/footer.php");
 ?>  
