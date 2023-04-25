@@ -1,6 +1,6 @@
 <?php
 
-include("../conexion.php");
+include("../Database/conexion.php");
 
 if (isset($_GET['idlibro'])) {
 

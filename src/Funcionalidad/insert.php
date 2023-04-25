@@ -1,5 +1,5 @@
 <?php
-include("../conexion.php"); 
+include("../Database/conexion.php"); 
 include("../funciones.php");
 csrf();
 if (isset($_POST['submit']) && !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
