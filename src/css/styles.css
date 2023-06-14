@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/abstract-neon-sunset-wallpaper-1152x768_36.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+}
+.form-control-lg {
+    background-color: #3b4652;
+    opacity: 0.85;
+    padding: 0 20px;
+    color: #ffff;
+}
+
+.seccion-principal {
+    margin: 0 auto;
+    margin-top: 15%;
+    padding: 0;
+}
+.user-image {
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+.user-image img {
+    width: 100px;
+    height: 100px;
+
+}
+
+
+.btn {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+
+.form-group input {
+    height: 42px;
+    font-size: 18px;
+    border: 0;
+}
+
+.informacionpersonal {
+    margin-top: 10px;
+}

@@ -10,6 +10,7 @@ if (isset($_GET['idlibro'])) {
 
     escapar($_SESSION['mensaje'] = 'Libro borrado satisfactoriamente');
     $_SESSION['mensaje_type'] = 'danger';
+    
     header("Location: ../index.php");
     
 }
