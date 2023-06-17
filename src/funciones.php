@@ -19,7 +19,7 @@ function csrf(){
 function escapar($html){
     return htmlspecialchars($html, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8");
 }
- // Comprueba si el CSRF si se ha pulsado el botón de enviar y si el CSRF es distinto
+ // Comprueba si se ha pulsado el botón de enviar y si el CSRF es distinto
 function siEsAleatorioElCsrf($submit, $sesion, $csrf){
     if (isset($submit) && !hash_equals($sesion, $csrf)) {
         die();
