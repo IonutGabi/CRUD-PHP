@@ -88,10 +88,10 @@ if (isset($_POST['submit']) && empty($error)) {
 
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellidos'];
-    $fechaNacimiento = $_POST['fechanacimiento'];
+    $fechanacimiento = $_POST['fechanacimiento'];
     $dni = $_POST['dni'];
 
-    $consulta = "INSERT INTO socios(nombre,apellidos,dni,fechanacimiento,domicilio) VALUES( '$nombre', '$apellidos',  '$dni' , '$fechaNacimiento')";
+    $consulta = "INSERT INTO socios(nombre,apellidos,dni,fechanacimiento) VALUES( '$nombre', '$apellidos',  '$dni' , '$fechanacimiento')";
 
 
     $mysql->query($consulta) or

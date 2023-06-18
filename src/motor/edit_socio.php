@@ -59,7 +59,7 @@ if (isset($_SESSION['mensaje']) && isset($_POST['submit'])) {
                     <label for="fechanacimiento">Fecha de nacimiento</label>
                     <input type="text" class="form-control" name="fechanacimiento" id="fechanacimiento" value="<?php echo $reg['fechanacimiento'];?>">
                     
-                <div class="form-group">
+                <div class="form-group mt-3">
                     <input type="hidden" name="csrf" value="<?php echo escapar($_SESSION['csrf']);?>">
                     <input type="submit" name="submit" class="btn btn-primary" value="Modificar">
                     <a href="../muestrasocios.php" class="btn btn-primary">Volver a la tabla de socios</a>
