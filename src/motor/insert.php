@@ -66,7 +66,7 @@ if (isset($_SESSION['mensaje']) && (isset($_POST['submit']))) {
                                     echo '<li>' . $error . '</li>';
 
                                 }
-                                die();
+                                
                             }
                 }
                 ?>

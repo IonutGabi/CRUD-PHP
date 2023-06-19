@@ -65,7 +65,7 @@ if (isset($_SESSION['mensaje']) && isset($_POST['submit'])) {
                         foreach ($errores as $error) {
                             echo '<li>' . $error . '</li>';
                         }
-                        die();
+                        
                     }
                 }
                     ?>
